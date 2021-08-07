@@ -1,5 +1,5 @@
 // load up the chart route
-const chartRoute = require("./pacmed-chart");
+const chartRoute = require("./chartRoute");
 
 const appRouter = (app, fs) => {
   //handling empty routes

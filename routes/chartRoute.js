@@ -4,7 +4,7 @@ const app = express();
 app.use(express());
 
 // variables
-const dataPath = "./data/pacmed-chart.json";
+const dataPath = "./data/chart.json";
 
 const chartRoute = (app, fs) => {
   // READ

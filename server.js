@@ -1,5 +1,5 @@
 const express = require('express')
-const chartRoute = require('./routes/pacmed-chart')
+const chartRoute = require('./routes/chartRoute')
 
 // variables
 const PORT = 3000
