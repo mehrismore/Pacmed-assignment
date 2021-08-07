@@ -1,0 +1,13 @@
+{
+  "name": "pacmed",
+  "version": "1.0.0",
+  "description": "pacmed FE assignment",
+  "main": "index.js",
+  "repository": "git@github.com:mehrbeniss/Pacmed-FE.git",
+  "author": "Mehr Beniss",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  }
+}
