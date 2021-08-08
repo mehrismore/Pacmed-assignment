@@ -2,7 +2,7 @@
   "name": "pacmed",
   "version": "1.0.0",
   "description": "pacmed FE assignment",
-  "main": "index.js",
+  "main": "server.js",
   "repository": "git@github.com:mehrbeniss/Pacmed-FE.git",
   "author": "Mehr Beniss",
   "license": "MIT",
