@@ -1,2 +1,7 @@
 # Pacmed-FE
-Pacmed FE Developer case
+Pacmed FE Developer Case
+
+## Development
+```bash
+nodemon server.js
+```
