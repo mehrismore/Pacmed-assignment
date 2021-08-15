@@ -22,10 +22,6 @@ app.use(
   })
 );
 
-app.get("/chart", (req, res) => {
-  res.send("Hello");
-});
-
 app.listen(
   PORT,
   console.log(`Server running on port: http://localhost:${PORT}`)
