@@ -1,18 +1,15 @@
 {
-  "name": "pacmed",
+  "name": "pacmed-server",
   "version": "1.0.0",
   "description": "pacmed FE assignment",
   "scripts": {
-    "client": "cd client && yarn start",
-    "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "start": "nodemon app.js"
   },
-  "main": "server.js",
+  "main": "index.js",
   "repository": "git@github.com:mehrbeniss/Pacmed-FE.git",
   "author": "Mehr Beniss",
-  "license": "MIT",
   "dependencies": {
-    "concurrently": "^6.2.1",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "nodemon": "^2.0.12"
   },
