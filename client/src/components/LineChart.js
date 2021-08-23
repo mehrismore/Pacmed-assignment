@@ -37,7 +37,7 @@ const LineChart = () => {
       });
     };
     chart();
-  }, {chartData});
+  }, []);
 
   return (
     <div className="container">
