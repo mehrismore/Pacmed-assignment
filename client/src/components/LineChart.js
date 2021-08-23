@@ -1,5 +1,4 @@
 import { React, useState, useEffect } from "react";
-import Chart from "chart.js";
 import { Line } from "react-chartjs-2";
 import axios from "axios";
 
@@ -38,7 +37,7 @@ const LineChart = () => {
       });
     };
     chart();
-  });
+  }, {chartData});
 
   return (
     <div className="container">
@@ -46,8 +45,8 @@ const LineChart = () => {
       <div>
         <Line
           data={chartData.data}
-          width={100}
-          height={50}
+          width={144}
+          height={144}
           options={{ maintainAspectRatio: false }}
         />
       </div>
