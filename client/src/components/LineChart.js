@@ -1,6 +1,8 @@
 import { React, useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 import axios from "axios";
+import moment from "moment";
+import { ToggleButton } from "./ToggleButton";
 
 const LineChart = () => {
   const [chartData, setChartData] = useState({});
@@ -18,6 +20,7 @@ const LineChart = () => {
         },
       });
       for (let dataObj of response.data.data.data_for_graph.complete) {
+        moment().format("ddd, hA");
         xAxisData.push(parseInt(dataObj.x));
         yAxisData.push(parseInt(dataObj.y));
       }
@@ -39,15 +42,35 @@ const LineChart = () => {
     chart();
   }, []);
 
+  const [selected, setSelected] = useState(false);
+
   return (
     <div className="container">
       <h2>Pacmed ICU Chart</h2>
+      <ToggleButton
+        selected={selected}
+        toggleSelected={() => {
+          setSelected(!selected);
+        }}
+      />
       <div>
         <Line
           data={chartData.data}
           width={144}
           height={144}
-          options={{ maintainAspectRatio: false }}
+          options={{
+            maintainAspectRatio: false,
+            scales: {
+              xAxes: [
+                {
+                  type: "time",
+                  time: {
+                    unit: "day",
+                  },
+                },
+              ],
+            },
+          }}
         />
       </div>
     </div>
